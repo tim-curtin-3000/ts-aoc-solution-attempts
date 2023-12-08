@@ -1,17 +1,3 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const sampleInput = fs.readFileSync(
-  path.resolve(__dirname, 'input-sample-part-1.txt'),
-  'utf8',
-);
-
-const textInput = fs.readFileSync(path.resolve(__dirname, 'input.txt'), 'utf8');
-
 const cubeAmountLimits: Record<string, number> = {
   red: 12,
   green: 13,
@@ -87,9 +73,3 @@ export function solvePartTwo(input: string): number {
 
   return setPowers.reduce((a, b) => a + b, 0);
 }
-
-// console.log(solvePartOne(sampleInput));
-// console.log(solvePartOne(textInput));
-
-// console.log(solvePartTwo(sampleInput));
-// console.log(solvePartOne(textInput));

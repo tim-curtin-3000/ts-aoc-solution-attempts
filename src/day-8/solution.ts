@@ -60,9 +60,9 @@ export function solvePartTwo(input: string): string {
     return counter;
   };
 
-  let allRunsCounters = Object.keys(nodes).filter((node) =>
-    node.endsWith('A'),
-  ).map((pos) => getCountFromStartingPos(pos));
+  let allRunsCounters = Object.keys(nodes)
+    .filter((node) => node.endsWith('A'))
+    .map((pos) => getCountFromStartingPos(pos));
 
   return lcm(allRunsCounters) + '';
 }

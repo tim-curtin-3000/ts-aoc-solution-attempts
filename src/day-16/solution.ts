@@ -1,5 +1,3 @@
-import { get } from 'http';
-
 type Direction = 'L' | 'R' | 'U' | 'D';
 type Tile = '.' | '|' | '-' | '/' | '\\';
 
